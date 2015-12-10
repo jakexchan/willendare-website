@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+{% load cms_tags %}
+{% load sekizai_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+{% block css %}
+{% addtoblock "css" %}<link href='https://fonts.googleapis.com/css?family=Cabin+Sketch' rel='stylesheet' type='text/css'>{% endaddtoblock %}
+{% addtoblock "css" %}<link href='{{ STATIC_URL }}css/index.css' rel='stylesheet' type='text/css'>{% endaddtoblock %}
+{% endblock %}
+{% block content %}
+	<section id="pro-block">
+		<div class="title">
+			<h1>Willendare</h1>
+		</div>
+		<div id="down">
+			<i class="icon icon-angle-double-down">&#xe800;</i>
+		</div>
+	</section>
+	<section id="service">
+		<h2 class="center-block">我们的服务</h2>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-sm-6 service-item">
+					<div class="image">
+						<img src="{{ MEDIA_URL }}service.png" data-sr='wait 0.5s, enter bottom, reset'>
+					</div>
+					<h3>
+						<a class="item-name" href="recruit/">人才寻访和猎聘</a>							
+					</h3>
+					<ul class="list-unstyled">
+						<li>驻站招聘</li>
+						<li>招聘流程外包</li>
+						<li>专业领域内中高端人才的寻访和猎聘</li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-sm-6 service-item">
+					<div class="image">
+						<img src="{{ MEDIA_URL }}service.png" data-sr='wait 0.5s, enter bottom, reset'>
+					</div>
+					<h3>
+						<a class="item-name" href="hrmanage/">人力资源管理服务</a>						
+					</h3>
+					<ul class="list-unstyled">
+						<li>单一模块人力资源管理外包</li>
+						<li>场外人力资源管理辅导和咨询</li>
+						<li>驻站式、全面人力资源业务伙伴</li>
+						<li>人力资源专题咨询项目管理和实施</li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-sm-6 service-item">
+					<div class="image">
+						<img src="{{ MEDIA_URL }}service.png" data-sr='wait 0.5s, enter bottom, reset'>
+					</div>
+					<h3>
+						<a class="item-name" href="software/">软件产品及服务</a>					
+					</h3>
+					<ul class="list-unstyled">
+						<li>软件升级、重构</li>
+						<li>软件测试解决方案</li>
+						<li>专注于软件控制系统</li>
+						<li>攸关性命的软件系统研发</li>
+						<li>擅长Python编程语言</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="about">
+		<h2 class="center-block">关于我们</h2>
+		<div class="container">
+			<div class="row about-item">
+				<div class="col-lg-6 col-sm-6 vcenter" data-sr='over 0.6s, scale up 100%, roll 90deg, reset' >
+					<img src="{{ MEDIA_URL }}cooperate.jpg">
+				</div><!--
+				--><div class="col-lg-6 col-sm-6 vcenter">
+					<h3>我们能帮助您做什么？</h3>
+					<p>
+						专业的技术人才测评<br>
+							项目合作/专业培训/IT服务过程中的人力资源管理咨询
+					</p>
+				</div>
+			</div>
+			<div class="row about-item">
+				<div class="col-lg-6 col-sm-6 vcenter">
+					<h3>为什么选择我们？</h3>
+					<p>
+						充分结合软件开发和人力资源管理的优势<br>
+
+		        专注于管理类、技术类项目管理<br>
+
+		        确定解决方案，从头至尾实施<br>
+
+		        让客户最大限度弥补短板，获得自己最需要的技术和人才<br>
+					</p>
+				</div><!--
+				--><div class="col-lg-6 col-sm-6 vcenter" data-sr='over 0.6s, scale up 100%, roll 90deg, reset' >
+					<img src="{{ MEDIA_URL }}work.jpg">
+				</div>
+			</div>
+			<div class="row about-item">
+				<div class="col-lg-6 col-sm-6 vcenter" data-sr='over 0.6s, scale up 100%, roll 90deg, reset' >
+					<img src="{{ MEDIA_URL }}team.jpg">
+				</div><!--
+				--><div class="col-lg-6 col-sm-6 vcenter">
+					<h3>我们的团队</h3>
+					<p>
+						首席咨询顾问
+						留学英国，拥有人力资源管理专业硕士学位<br>
+					  多年的粒子治疗、高科技领域服务经验，行业经验丰富<br>
+					  有十多年欧洲企业及中国国企、民企全面人力资源管理岗位经验<br>
+					  专业化项目小组
+					  勇于创新
+					  执行力强<br>
+					  英语语言优势<br>
+					  高素质、年轻化团队，充满活力与热情<br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock content %}
+{% block js%}
+{% addtoblock "js" %}<script src='{{ STATIC_URL }}js/scrollReveal.min.js'></script>{% endaddtoblock %}
+{% addtoblock "js" %}<script src='{{ STATIC_URL }}js/script.js'></script>{% endaddtoblock %}
+
+{% endblock%}
