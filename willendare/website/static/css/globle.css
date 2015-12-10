@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'fontello';
+  src: url('./font/fontello.eot?70793480');
+  src: url('./font/fontello.eot?70793480#iefix') format('embedded-opentype'),
+       url('./font/fontello.woff?70793480') format('woff'),
+       url('./font/fontello.ttf?70793480') format('truetype'),
+       url('./font/fontello.svg?70793480#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.header-navbar{
+	background-color: #38C3FF;
+	border-bottom:1px solid #38C3FF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: none;
+}
+.header-navbar a{
+	color: #fff;
+	font-weight: bold;
+}
+.header-navbar .navbar-nav a{
+	padding-left: 24px;
+	padding-right: 24px;
+}
+.header-navbar .navbar-nav a:hover{
+	background-color: #fff;
+	color: #000;	
+}
+.navbar-fixed-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+.header-navbar .navbar-toggle{
+	border-color: #fff;
+}
+.header-navbar .nav .open>a:focus, .header-navbar .nav .open>a:hover{
+	background-color: #fff;
+	color: #000;
+}
