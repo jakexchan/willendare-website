@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load sekizai_tags %}
+
+{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+
+{% block css %}
+{% addtoblock "css" %}
+<link href='{{ STATIC_URL }}css/service.css' rel='stylesheet' type='text/css'>
+{% endaddtoblock %}
+{% endblock %}
+
+{% block content %}
+	<section class="top-title">
+		<h1 class="center">人才寻访和猎聘</h1>
+		<div class="overlay"></div>
+	</section>
+	<div class="icon-box">
+		<div class="circle">
+			<i class="icon icon-emo-happy">&#xe802;</i>
+		</div>
+	</div>
+	<section>
+		<div class="wrap">
+			<div class="wrap-left" data-sr='over 1s, enter left'>
+				<h2>{% placeholder Item-title-1 %}</h2>
+			</div>
+			<div class="detail" data-sr='over 1.4s, enter right'>
+				{% placeholder Item-content-1 %}
+			</div>
+			<div class="circle" data-sr='over 1.2s, enter bottom,flip 90deg, reset'>
+				<i class="icon icon-star">&#xe804;</i>
+			</div>
+			<div class="v-line center"></div>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+			<div class="wrap-left" data-sr='over 1s, enter left'>
+				<h2>{% placeholder Item-title-2 %}</h2>
+			</div>
+			<div class="detail" data-sr='over 1.4s, enter right'>
+				{% placeholder Item-content-2 %}
+			</div>
+			<div class="circle" data-sr='over 1.2s, enter bottom,flip 90deg, reset'>
+				<i class="icon icon-star">&#xe804;</i>
+			</div>
+			<div class="v-line center"></div>
+		</div>
+	</section>
+	<section>
+		<div class="wrap">
+			<div class="wrap-left" data-sr='over 1s, enter left'>
+				<h2>{% placeholder Item-title-3 %}</h2>
+			</div>
+			<div class="detail" data-sr='over 1.4s, enter right'>
+				{% placeholder Item-content-3 %}
+			</div>
+			<div class="circle" data-sr='over 1.2s, enter bottom,flip 90deg, reset'>
+				<i class="icon icon-star">&#xe804;</i>
+			</div>
+			<div class="v-line center"></div>
+		</div>
+	</section>
+{% endblock content %}
+{% block js%}
+{% addtoblock "js" %}<script src='{{ STATIC_URL }}js/scrollReveal.min.js'></script>{% endaddtoblock %}
+{% addtoblock "js" %}
+<script>
+(function(){
+	window.sr = new scrollReveal();
+}());
+</script>
+{% endaddtoblock%}
+{% endblock %}
