@@ -1,0 +1,8 @@
+@media(min-width: 970px){
+	.col-md-17: {
+		width: 70.8333333333%;
+	}
+	.col-md-7, .col-md-17{
+		float: left;
+	}
+}

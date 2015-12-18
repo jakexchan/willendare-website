@@ -1,4 +1,6 @@
 import os
+from django.utils.translation import ugettext_lazy as _
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -120,7 +122,7 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
 )
 
 INSTALLED_APPS = (
@@ -165,7 +167,8 @@ INSTALLED_APPS = (
     'parler',
     'sortedm2m',
     'taggit',
-    'aldryn_bootstrap3'
+    'aldryn_bootstrap3',
+    'cmsplugin_contact_plus'
 )
 
 LANGUAGES = (
@@ -203,7 +206,9 @@ CMS_TEMPLATES = (
     ## Customize this
     ('page.html', 'Page'),
     ('feature.html', 'Page with Feature'),
-    ('service.html', 'Page with Service')
+    ('service.html', 'Page with Service'),
+    ('contact.html', 'Page with Contact'),
+    ('index.html', 'Page with Index'),
 )
 
 CMS_PERMISSION = True
@@ -247,3 +252,19 @@ STATICFILES_FINDERS = (
 ALDRYN_BOILERPLATE_NAME = 'bootstrap3'
 
 THUMBNAIL_HIGH_RESOLUTION = True
+
+ADMINS = (
+    ('Manager', '741564787@qq.com'),
+    ('Administor', 'chenjunkai@willendare.com'),
+)
+
+#Email settings
+SERVER_EMAIL = '741564787@qq.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.qq.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = '741564787@qq.com'
+EMAIL_HOST_PASSWORD = 'yzdhntlidjhubeib'
+EMAIL_USE_SSL = True
+DEFAULT_FROM_EMAIL = SERVER_EMAIL
+EMAIL_SUBJECT_PREFIX = 'From Willendare Website'

@@ -8,6 +8,12 @@
   font-weight: normal;
   font-style: normal;
 }
+.icon{
+	font-family: "fontello";
+	font-style: normal;
+	color: #fff;
+	cursor: pointer;
+}
 .header-navbar{
 	background-color: #38C3FF;
 	border-bottom:1px solid #38C3FF;
@@ -135,4 +141,43 @@
 }
 .aldryn-newsblog-tags li a:hover{
 	text-decoration: none;
+}
+.aldryn-newsblog-detail{
+	width:70%;
+	margin: 0 auto;
+	margin-top: 90px;
+	margin-bottom: 90px;
+}
+/*footer css*/
+footer{
+	height:120px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	overflow:hidden;
+}
+.social-link i{
+	color:#000;
+	font-size: 1.725em;
+}
+.social-link li{
+	margin-left: 10px;
+}
+.social-link li a:hover{
+	text-decoration: none;
+}
+.social-link li:hover{
+	background-color: #000;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border-radius: 50%;
+}
+.social-link i:hover{
+	color:#fff;
+}
+footer p{
+	font-size: 0.875em;
+	margin-bottom: 6px;
+	float:right;
 }

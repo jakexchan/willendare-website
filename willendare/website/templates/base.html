@@ -3,6 +3,8 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}This is my new project home page{% endblock title %}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
@@ -10,6 +12,13 @@
         <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/globle.css">
         {% render_block "css" %}
         {% block css %}{% endblock %}
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
     </head>
     <body>
         {% cms_toolbar %}
@@ -33,6 +42,33 @@
         </div>
 
         {% block content %}{% endblock content %}
+
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <ul class='social-link list-unstyled list-inline'>
+                  <li>
+                    <a href="#"><i class="icon icon-linkedin">&#xe80a;</i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icon icon-qq">&#xe80b;</i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icon icon-wechat">&#xe809;</i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="icon icon-weibo">&#xe808;</i></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4 col-md-offset-5">
+                <p>Copyright © 2015 广州汇人达计算机科技有限公司</p>  
+                <p>粤ICP15006654号-1 </p>
+              </div>
+            </div>
+          </div>
+        </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
         {% render_block "js" %}
