@@ -73,9 +73,15 @@
 	cursor: pointer;
 }
 #about img{
+	display:inline-block;
 	max-width: 360px;
 	max-height: 360px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
 	border-radius: 50%;
+	text-align: center;
 }
 .about-item{
 	margin-bottom: 80px;
@@ -83,10 +89,11 @@
 .about-item h3{
 	padding-bottom: 36px;
 }
-.about-item p{
+.about-item li{
 	font-size: 1.25em;
 	line-height: 1.675em;
 	color: #777;
+	text-align: center;
 }
 .vcenter {
     display: inline-block;
