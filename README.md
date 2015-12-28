@@ -9,3 +9,6 @@ Aldryn-common:<https://github.com/aldryn/aldryn-common>
 Aldryn-bootstrap3:<https://github.com/aldryn/aldryn-bootstrap3>
 # How to install environment
 Refer Django CMS offical tutorials: <http://docs.django-cms.org/en/develop/introduction/index.html>
+
+# How to release
+uwsgi --http :8001 --home ~/willendare/env/ -hdir ~/willendare/willendare-website/willendare/ --module website.wsgi
