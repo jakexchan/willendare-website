@@ -69,7 +69,7 @@
 .service-item{
 	margin-bottom: 60px;
 }
-.item-name{
+.service-item h3 a{
 	cursor: pointer;
 }
 #about img{
