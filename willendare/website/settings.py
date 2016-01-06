@@ -253,18 +253,19 @@ ALDRYN_BOILERPLATE_NAME = 'bootstrap3'
 
 THUMBNAIL_HIGH_RESOLUTION = True
 
+#Add email accept account:
+#('[Name]', '[email]')
 ADMINS = (
-    ('Manager', '741564787@qq.com'),
-    ('Administor', 'chenjunkai@willendare.com'),
+    ('Manager', '')
 )
 
 #Email settings
-SERVER_EMAIL = '741564787@qq.com'
+SERVER_EMAIL = ''  #stmp email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.qq.com'
+EMAIL_HOST = ''  #smtp.qq.com
 EMAIL_PORT = 465
-EMAIL_HOST_USER = '741564787@qq.com'
-EMAIL_HOST_PASSWORD = 'yzdhntlidjhubeib'
+EMAIL_HOST_USER = ''  #smtp user account
+EMAIL_HOST_PASSWORD = ''  #smtp account password
 EMAIL_USE_SSL = True
 DEFAULT_FROM_EMAIL = SERVER_EMAIL
 EMAIL_SUBJECT_PREFIX = 'From Willendare Website'
