@@ -11,7 +11,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 admin.autodiscover()
 
 urlpatterns = i18n_patterns('',
-	# url(r'^$', 'website.views.index', name='home'),
+	url(r'^$', 'website.views.index', name='home'),
     url(r'^contact/sendEmail/$', 'website.views.sendEmail'),
     url(r'^thanks/$', 'website.views.thanks'),
     url(r'^admin/', include(admin.site.urls)),  # NOQA

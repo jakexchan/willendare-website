@@ -19,7 +19,7 @@
 	border-bottom:1px solid #38C3FF;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	display: none;
+	visibility: visible;
 }
 .header-navbar a{
 	color: #fff;

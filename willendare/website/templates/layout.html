@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keyword" content="汇人达,willendare,软件服务,猎聘,人力资源">
         <title>{% block title %}This is my new project home page{% endblock title %}</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
@@ -19,10 +20,11 @@
           <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
           <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <link rel="shortcut icon" href="{{ MEDIA_URL }}logo.ico">
     </head>
     <body>
         {% cms_toolbar %}
-        <div class="navbar navbar-fixed-top header-navbar" id="navbar" role="navigation">
+        <div class="navbar navbar-fixed-top header-navbar" id="navbar" role="navigation" style="visibility: hidden;">
           <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,7 +33,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Willendare</a>
+            <a class="navbar-brand" href="/">Willendare</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -79,9 +81,9 @@
           window.onscroll = function(){
             var scrollTop = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop;
             if(scrollTop !== 0){
-              document.getElementById("navbar").style.display = 'block';
+              document.getElementById("navbar").style.visibility = 'visible';
             }else{
-              document.getElementById("navbar").style.display = 'none';
+              document.getElementById("navbar").style.visibility = 'hidden';
             }
           }
         }());

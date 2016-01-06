@@ -61,10 +61,23 @@
 
 	var willendare = {};
 
+ willendare.setHeight = function(){
+   var proBlock = document.getElementById('pro-block');
+
+   var height = window.innerHeight;
+   
+   proBlock.style.height = height + 'px';
+ };
+
+ willendare.setHeight();
+
 	willendare.downHandle = function(){
 		var downObj = document.getElementById("down");
 		downObj.onclick = function(){
-			Scroll.moveScrollTop(586, 6);
+			var navHeight = document.getElementById('navbar').clientHeight;
+			var proBlockHeight = document.getElementById('pro-block').clientHeight;
+			var height = proBlockHeight - navHeight;
+			Scroll.moveScrollTop(height, 6);
 		};
 
 	};
